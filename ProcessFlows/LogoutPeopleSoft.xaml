@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LogoutPeopleSoft" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="clr-namespace:OMES_Peoplesoft_Activities;assembly=OMES Peoplesoft Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LogoutPeopleSoft" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:LIB_PeopleSoft_9_2;assembly=LIB_PeopleSoft_9.2" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>592,530</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1106.6666666666667,1542</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LogoutPeopleSoft_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -45,6 +45,7 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>LIB_PeopleSoft_9_2</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -100,48 +101,43 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>LIB_PeopleSoft_9.2</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence: LogoutPeopleSoft" sap:VirtualizedContainerService.HintSize="550.6666666666666,465.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence: LogoutPeopleSoft" sap:VirtualizedContainerService.HintSize="1116.6666666666667,1477.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch: LogoutPeopleSoft" sap:VirtualizedContainerService.HintSize="488.6666666666667,354.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch: LogoutPeopleSoft" sap:VirtualizedContainerService.HintSize="1054.6666666666667,1366.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="This process is for Logging out of People soft application." DisplayName="LogoutPeopleSoft" sap:VirtualizedContainerService.HintSize="450,115.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence sap2010:Annotation.AnnotationText="This process is for Logging out of People soft application." DisplayName="LogoutPeopleSoft" sap:VirtualizedContainerService.HintSize="1016,1127.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message: Logout Workflow Started" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;PeoplesoftLogoutWorkflowStarted&quot;).ToString]">
+          <ui:LogMessage DisplayName="Log Message: Logout Workflow Started" sap:VirtualizedContainerService.HintSize="954,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;PeoplesoftLogoutWorkflowStarted&quot;).ToString]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <uix:NCheckState DisplayName="Check App State 'Refresh button'" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="[cdbl(in_Config(&quot;TargetAppearWait&quot;))]" Version="V3">
+          <uix:NCheckState DisplayName="Check App State 'Refresh button'" sap:VirtualizedContainerService.HintSize="954,616.6666666666666" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="[cdbl(in_Config(&quot;TargetAppearWait&quot;))]" Version="V3">
             <uix:NCheckState.IfExists>
-              <Sequence DisplayName="Target appears: Menu Button" sap:VirtualizedContainerService.HintSize="450,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Target appears: Menu Button" sap:VirtualizedContainerService.HintSize="450,395.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log Message: Peoplesoft Open" sap:VirtualizedContainerService.HintSize="388,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;PeopleSoftApplicationFound&quot;).ToString]" />
-                <o:Peoplesoft_Log_Out DisplayName="Peoplesoft Log Out and Close Window" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Peoplesoft_Log_Out_2" in_strPeoplesoftURL="[in_Config(&quot;PeopleSoft_LoginURL&quot;).ToString]">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </o:Peoplesoft_Log_Out>
+                <l:Peoplesoft_Log_Out in_strPeoplesoftURL="{x:Null}" DisplayName="Peoplesoft Log Out: Logout and close" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Peoplesoft_Log_Out_3" />
               </Sequence>
             </uix:NCheckState.IfExists>
             <uix:NCheckState.IfNotExists>
@@ -166,12 +162,12 @@
             </uix:NCheckState.Target>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NCheckState>
-          <ui:LogMessage DisplayName="Log Message: Logout Workflow Completed" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;PeoplesoftLogoutWorkflowCompleted&quot;).ToString]">
+          <ui:LogMessage DisplayName="Log Message: Logout Workflow Completed" sap:VirtualizedContainerService.HintSize="954,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;PeoplesoftLogoutWorkflowCompleted&quot;).ToString]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -181,7 +177,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454.6666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1020.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>

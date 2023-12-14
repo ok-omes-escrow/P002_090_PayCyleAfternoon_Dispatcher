@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LoginToPeopleSoft" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="clr-namespace:OMES_Peoplesoft_Activities;assembly=OMES Peoplesoft Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LoginToPeopleSoft" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:LIB_PeopleSoft_9_2;assembly=LIB_PeopleSoft_9.2" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>592,530</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>854,1492</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoginToPeopleSoftSeq_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -53,6 +53,7 @@
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
       <x:String>UiPath.UIAutomationNext.Exceptions</x:String>
+      <x:String>LIB_PeopleSoft_9_2</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -103,24 +104,26 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>LIB_PeopleSoft_9.2</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence: LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="550.6666666666666,465.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Sequence: LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="550.6666666666666,1427.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch: LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="488.6666666666667,354.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch: LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="488.6666666666667,1316.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="This process is for Logging in to People soft application." DisplayName="LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="450,115.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="This process is for Logging in to People soft application." DisplayName="LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="450,1077.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="ss:SecureString" Name="strPassword" />
             <Variable x:TypeArguments="x:String" Name="strUsername" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
@@ -146,13 +149,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <o:Peoplesoft_Login DisplayName="Peoplesoft Login: To Check Job" sap:VirtualizedContainerService.HintSize="388,197.33333333333334" sap2010:WorkflowViewState.IdRef="Peoplesoft_Login_1" in_strPassword="[strPassword]" in_strPeoplesoftURL="[in_Config(&quot;PeopleSoft_LoginURL&quot;).ToString]" in_strUsername="[strUsername]">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </o:Peoplesoft_Login>
+          <l:Peoplesoft_Login DisplayName="Peoplesoft Login: Login To Peoplesoft" sap:VirtualizedContainerService.HintSize="388,197.33333333333334" sap2010:WorkflowViewState.IdRef="Peoplesoft_Login_2" in_strPassword="[strPassword]" in_strPeoplesoftURL="https://soklfpub-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/?cmd=login&amp;languageCd=ENG&amp;" in_strUsername="[strUsername]" />
           <ui:LogMessage DisplayName="Log Message:Workflow Completed" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;PeoplesoftLoginWorkflowCompleted&quot;).ToString]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
