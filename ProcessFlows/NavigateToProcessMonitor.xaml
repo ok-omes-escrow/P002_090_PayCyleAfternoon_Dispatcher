@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>558,1017.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>558,1032</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NavigateToProcessMonitor_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,15 +111,15 @@
       <AssemblyReference>LIB_PeopleSoft_9.2</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence: NavigateToProcessMonitor" sap:VirtualizedContainerService.HintSize="550.6666666666666,952.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence: NavigateToProcessMonitor" sap:VirtualizedContainerService.HintSize="550.6666666666666,967.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch: NavigateToProcessMonitor" sap:VirtualizedContainerService.HintSize="488.6666666666667,842" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch: NavigateToProcessMonitor" sap:VirtualizedContainerService.HintSize="488.6666666666667,856.6666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="This process helps in navigation to the process monitor." DisplayName="NavigateToProcessMonitor" sap:VirtualizedContainerService.HintSize="450,602.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap2010:Annotation.AnnotationText="This workflow helps in navigation to the process monitor using a reusable component." DisplayName="NavigateToProcessMonitor" sap:VirtualizedContainerService.HintSize="450,617.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,7 +134,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <l:Navigate_to_Process_Scheduler DisplayName="Navigate to Process Scheduler: Process Monitor" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Navigate_to_Process_Scheduler_2" in_strPeoplesoftURL="https://soklfpub-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL" />
+          <l:Navigate_to_Process_Scheduler DisplayName="Navigate to Process Scheduler: Process Monitor" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Navigate_to_Process_Scheduler_2" in_strPeoplesoftURL="[in_Config(&quot;PeopleSoft_HomepageURL&quot;).ToString]" />
           <ui:LogMessage DisplayName="Log Message: Workflow Completed" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;NavigateToProcessMonitorWorkflowCompleted&quot;).ToString]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
