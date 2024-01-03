@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>586.6666666666666,1420</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>651.3333333333334,1732</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetMailDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -92,15 +92,15 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence: GetMailDetails" sap:VirtualizedContainerService.HintSize="596.6666666666666,1355.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence DisplayName="Sequence: GetMailDetails" sap:VirtualizedContainerService.HintSize="661.3333333333334,1667.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch: GetMailDetails" sap:VirtualizedContainerService.HintSize="534.6666666666666,1244.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch: GetMailDetails" sap:VirtualizedContainerService.HintSize="599.3333333333334,1556.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="This workflow is used to check the exception message and outputs the mail body, subject and recipients list accordingly." DisplayName="GetMailDetails" sap:VirtualizedContainerService.HintSize="496,1005.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="This workflow is used to check the exception message and outputs the mail body, subject and recipients list accordingly." DisplayName="GetMailDetails" sap:VirtualizedContainerService.HintSize="560.6666666666666,1317.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="strExceptionNumber" />
           </Sequence.Variables>
@@ -111,15 +111,8 @@
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
-              <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants","Messages"}]</InArgument>
-              <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[in_Config]</OutArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-          <ui:LogMessage DisplayName="Log Message: Workflow Started" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;GetMailDetailsWorkflowStarted&quot;).ToString]" />
-          <Assign DisplayName="Assign Exception Number" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <ui:LogMessage DisplayName="Log Message: Workflow Started" sap:VirtualizedContainerService.HintSize="498.6666666666667,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;GetMailDetailsWorkflowStarted&quot;).ToString]" />
+          <Assign DisplayName="Assign Exception Number" sap:VirtualizedContainerService.HintSize="498.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[strExceptionNumber]</OutArgument>
             </Assign.To>
@@ -127,10 +120,10 @@
               <InArgument x:TypeArguments="x:String">[(in_strExceptionMessage.Split(":"))(0)]</InArgument>
             </Assign.Value>
           </Assign>
-          <If sap2010:Annotation.AnnotationText="This condition checks if the error is of a predefined nature and returns the body , subject and recipients according to the error. If error is not marked with specific email details then it returns the generic email." Condition="[in_Config(&quot;MailsWithCustomMessages&quot;).ToString.Contains(strExceptionNumber)]" DisplayName="If Exception has a Custom Mail" sap:VirtualizedContainerService.HintSize="434,199.33333333333334" sap2010:WorkflowViewState.IdRef="If_1">
+          <If sap2010:Annotation.AnnotationText="This condition checks if the error is of a predefined nature and returns the body , subject and recipients according to the error. If error is not marked with specific email details then it returns the generic email." Condition="[in_Config(&quot;MailsWithCustomMessages&quot;).ToString.Contains(strExceptionNumber)]" DisplayName="If Exception has a Custom Mail" sap:VirtualizedContainerService.HintSize="498.6666666666667,666.6666666666666" sap2010:WorkflowViewState.IdRef="If_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
@@ -188,7 +181,7 @@
                           <OutArgument x:TypeArguments="x:String">[out_strEmailBody]</OutArgument>
                         </ui:AssignOperation.To>
                         <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">[out_strEmailBody.Replace("&lt;15mintime_stamp&gt;",Now.AddMinutes(cdbl(in_Config("BE_1TimeStampAddMinutes"))).ToString).Replace("&lt;bot_email_address&gt;",in_Config("BotEmailAddress").ToString).Replace("&lt;Bot_user_ID&gt;", Environment.UserName)]</InArgument>
+                          <InArgument x:TypeArguments="x:String">[out_strEmailBody.Replace("&lt;15mintime_stamp&gt;",Now.AddMinutes(cdbl(in_Config("BE_1TimeStampAddMinutes"))).ToString).Replace("&lt;bot_email_address&gt;",in_Config("BotEmailAddress").ToString).Replace("&lt;Bot_user_ID&gt;", in_Config("BotPeoplesoftUserID").ToString)]</InArgument>
                         </ui:AssignOperation.Value>
                       </ui:AssignOperation>
                     </scg:List>
@@ -252,7 +245,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <ui:LogMessage DisplayName="Log Message: Workflow Completed" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;GetMailDetailsWorkflowCompleted&quot;).ToString]" />
+          <ui:LogMessage DisplayName="Log Message: Workflow Completed" sap:VirtualizedContainerService.HintSize="498.6666666666667,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;GetMailDetailsWorkflowCompleted&quot;).ToString]" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>

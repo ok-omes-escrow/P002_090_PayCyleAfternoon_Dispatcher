@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CheckTriggerEmail" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="clr-namespace:O365MailActivities_00_00;assembly=O365MailActivities_00.00" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umm="clr-namespace:UiPath.MicrosoftOffice365.Models;assembly=UiPath.MicrosoftOffice365" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CheckTriggerEmail" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:l="clr-namespace:LIB_O365MailActivities_00_00;assembly=LIB_O365MailActivities_00.00" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umm="clr-namespace:UiPath.MicrosoftOffice365.Models;assembly=UiPath.MicrosoftOffice365" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
@@ -160,7 +160,7 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">200,213.33333333333334</av:Point>
               <av:Size x:Key="ShapeSize">200,99.33333333333333</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,312.6666666666667 300,363</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">300,312.6666666666667 300,362.6666666666667</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assign value to filter parameters." DisplayName="Multiple Assign: Mail Filter Values" sap:VirtualizedContainerService.HintSize="200,99.33333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
@@ -179,7 +179,7 @@
                     <OutArgument x:TypeArguments="x:String">[strMailFilterStartTime]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[in_Config("MailFilterStartTime").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[in_Config("MailFilterDate").ToString]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -211,18 +211,18 @@
             <FlowStep x:Name="__ReferenceID5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">199.99999999999997,363</av:Point>
+                  <av:Point x:Key="ShapeLocation">200,362.6666666666667</av:Point>
                   <av:Size x:Key="ShapeSize">200,54</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">300,417 300,446.6666666666667</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">300,416.6666666666667 300,446.6666666666667</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <o:Read_Email Email_Retrieval_Count="{x:Null}" ApplicationID_Asset_Name="[in_Config(&quot;GraphAPIO365ApplicationID&quot;).ToString]" Application_Secret_Asset_Name="[in_Config(&quot;GraphAPIApplicationSecret&quot;).ToString]" DisplayName="Read Email: Trigger Email" Email_Account="[in_Config(&quot;BotEmailAddress&quot;).ToString]" Email_Filter="[&quot;subject eq '&quot;+ strMailSubject+ &quot;' and ReceivedDateTime gt “&quot; + strMailFilterStartTime&quot;]" Email_Folder="[in_Config(&quot;OutlookTriggerEmailFolderName&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,513.3333333333334" sap2010:WorkflowViewState.IdRef="Read_Email_1" Mark_Email_As_Read="True" Result_Email_List="[mailInboxMails]" TenantID_Asset_Name="[in_Config(&quot;GraphAPIO365TenantID&quot;).ToString]">
+              <l:Read_Email Email_Retrieval_Count="{x:Null}" ApplicationID_Asset_Name="[in_Config(&quot;GraphAPIO365ApplicationID&quot;).ToString]" Application_Secret_Asset_Name="[in_Config(&quot;GraphAPIApplicationSecret&quot;).ToString]" DisplayName="Read Email: Trigger Email (Read_Email)" Email_Account="[in_Config(&quot;BotEmailAddress&quot;).ToString]" Email_Filter="[&quot;subject eq '&quot;+ strMailSubject+ &quot;' and ReceivedDateTime ge &quot; + strMailFilterStartTime]" Email_Folder="[in_Config(&quot;OutlookTriggerEmailFolderName&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,566" sap2010:WorkflowViewState.IdRef="Read_Email_3" Mark_Email_As_Read="[convert.ToBoolean(in_Config(&quot;MarkEmailAsRead&quot;))]" Orchestrator_Folder_Path="[in_Config(&quot;OrchestratorGraphAPIAssetsFolder&quot;).ToString]" Result_Email_List="[mailInboxMails]" TenantID_Asset_Name="[in_Config(&quot;GraphAPIO365TenantID&quot;).ToString]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-              </o:Read_Email>
+              </l:Read_Email>
               <FlowStep.Next>
                 <FlowDecision x:Name="__ReferenceID1" Condition="[mailInboxMails.Count=1]" DisplayName="Flow Decision: Mail Found" sap:VirtualizedContainerService.HintSize="144,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                   <sap:WorkflowViewStateService.ViewState>

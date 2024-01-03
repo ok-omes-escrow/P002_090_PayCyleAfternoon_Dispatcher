@@ -3,10 +3,9 @@
   "description": "P002_090_PayCycleAfternoon_Dispatcher",
   "main": "Main.xaml",
   "dependencies": {
-    "LIB_PeopleSoft_9.2": "[1.0.1-alpha.16]",
-    "O365MailActivities_00.00": "[1.0.1]",
+    "LIB_O365MailActivities_00.00": "[1.0.3]",
+    "LIB_PeopleSoft_9.2": "[1.0.1-alpha.19]",
     "UiPath.Excel.Activities": "[2.20.3]",
-    "UiPath.Mail.Activities": "[1.22.0-preview]",
     "UiPath.System.Activities": "[23.4.5]",
     "UiPath.UIAutomation.Activities": "[23.4.8]"
   },
@@ -14,7 +13,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.5.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1-alpha.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

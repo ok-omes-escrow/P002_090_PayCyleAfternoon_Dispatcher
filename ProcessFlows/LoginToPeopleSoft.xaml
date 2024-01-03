@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>602.6666666666666,2081.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>561.3333333333334,740</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoginToPeopleSoftSeq_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,17 +113,19 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence: LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="612.6666666666666,2016.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Sequence: LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="552,675.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch: LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="550.6666666666666,1906" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch: LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="490,564.6666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="This process is for Logging in to People soft application." DisplayName="LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="512,1666.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="This process is for Logging in to People soft application." DisplayName="LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="512,1789.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="ss:SecureString" Name="strPassword" />
             <Variable x:TypeArguments="x:String" Name="strUsername" />
@@ -149,6 +151,14 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:GetRobotCredential>
+          <Assign DisplayName="Assign UserId to Config value" sap:VirtualizedContainerService.HintSize="450,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Object">[in_Config("BotPeoplesoftUserID")]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Object">[strUsername]</InArgument>
+            </Assign.Value>
+          </Assign>
           <ui:LogMessage DisplayName="Log Message: Get Creds" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;PeoplesoftLoginGetCredentials&quot;)]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -158,10 +168,10 @@
           </ui:LogMessage>
           <TryCatch DisplayName="Try Catch: Peoplesoft Login" sap:VirtualizedContainerService.HintSize="450,786.6666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <TryCatch.Try>
-              <l:Peoplesoft_Login DisplayName="Peoplesoft Login: Login To Peoplesoft" sap:VirtualizedContainerService.HintSize="334,197.33333333333334" sap2010:WorkflowViewState.IdRef="Peoplesoft_Login_2" in_strPassword="[strPassword]" in_strPeoplesoftURL="[in_Config(&quot;PeopleSoft_LoginURL&quot;).ToString]" in_strUsername="[strUsername]">
+              <l:Peoplesoft_Login DisplayName="Peoplesoft Login: Login To Peoplesoft" sap:VirtualizedContainerService.HintSize="334,302.6666666666667" sap2010:WorkflowViewState.IdRef="Peoplesoft_Login_2" in_strLoginException="[in_Config(&quot;PeoplesoftLoginUnexpectedSE&quot;).ToString]" in_strPassword="[strPassword]" in_strPeoplesoftURL="[in_Config(&quot;PeopleSoft_LoginURL&quot;).ToString]" in_strUserIDTextboxException="[in_Config(&quot;PeoplesoftLoginPageNotFoundSE&quot;).ToString]" in_strUsername="[strUsername]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -215,10 +225,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="516.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,391.3333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -226,10 +236,10 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="450,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="450,320.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
