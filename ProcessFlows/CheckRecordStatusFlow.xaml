@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>857.3333333333334,3386</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>562,3241.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CheckRecordStatusFlow_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -108,7 +108,7 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow checks if there are any records with Pending or No success status and hence marks it as exception and data is not added to the queue, if there are no pending or NoSuccess records then the paycycle is added to queue." DisplayName="CheckRecordStatusFlow" sap:VirtualizedContainerService.HintSize="576.6666666666666,3321.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_16">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow checks if there are any records with Pending or No success status and hence marks it as exception and data is not added to the queue, if there are no pending or NoSuccess records then the paycycle is added to queue." DisplayName="CheckRecordStatusFlow" sap:VirtualizedContainerService.HintSize="572,3176.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_16">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strViewLogTraceWindowCounter" />
       <Variable x:TypeArguments="x:Int32" Name="intNoSuccessFound" />
@@ -123,14 +123,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message : Check Status Workflow Started" sap:VirtualizedContainerService.HintSize="514.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;CheckRecordStatusWorkflowStarted&quot;).ToString]">
+    <ui:LogMessage DisplayName="Log Message : Check Status Workflow Started" sap:VirtualizedContainerService.HintSize="510,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;CheckRecordStatusWorkflowStarted&quot;).ToString]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:MultipleAssign DisplayName="Multiple Assign: Initialize" sap:VirtualizedContainerService.HintSize="514.6666666666666,131.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:MultipleAssign DisplayName="Multiple Assign: Initialize" sap:VirtualizedContainerService.HintSize="510,131.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -157,7 +157,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Check if element is present or not." AttachMode="ByInstance" DisplayName="Edge: Process Monitor Check Data Present" sap:VirtualizedContainerService.HintSize="510,84.66666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Check if element is present or not." AttachMode="ByInstance" DisplayName="Edge: Process Monitor Check Data Present" sap:VirtualizedContainerService.HintSize="510,84.66666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -469,7 +469,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <If sap2010:Annotation.AnnotationText="If NoSuccess record was found then exception is thrown." Condition="[intNoSuccessFound&gt;0]" DisplayName="If No Success Throw Error" sap:VirtualizedContainerService.HintSize="514.6666666666666,846.6666666666666" sap2010:WorkflowViewState.IdRef="If_7">
+    <If sap2010:Annotation.AnnotationText="If NoSuccess record was found then exception is thrown." Condition="[intNoSuccessFound&gt;0]" DisplayName="If No Success Throw Error" sap:VirtualizedContainerService.HintSize="510,846.6666666666666" sap2010:WorkflowViewState.IdRef="If_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -533,7 +533,7 @@
               <InArgument x:TypeArguments="x:String">[strScreenshotPath]</InArgument>
             </Assign.Value>
           </Assign>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor Close Process Detail Window NoSuccess" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor Close Process Detail Window NoSuccess" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -581,7 +581,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If sap2010:Annotation.AnnotationText="If pending record is present even after retries exception is thrown." Condition="[intPendingFound&gt;0]" DisplayName="If Pending Throw Error" sap:VirtualizedContainerService.HintSize="514.6666666666666,1223.3333333333333" sap2010:WorkflowViewState.IdRef="If_8">
+    <If sap2010:Annotation.AnnotationText="If pending record is present even after retries exception is thrown." Condition="[intPendingFound&gt;0]" DisplayName="If Pending Throw Error" sap:VirtualizedContainerService.HintSize="510,1078.6666666666667" sap2010:WorkflowViewState.IdRef="If_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -590,20 +590,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="480.6666666666667,1008.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_28">
+        <Sequence sap:VirtualizedContainerService.HintSize="476,864" sap2010:WorkflowViewState.IdRef="Sequence_28">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message : Pending exception" sap:VirtualizedContainerService.HintSize="438.6666666666667,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[in_Config(&quot;PendingRecordRetriesDone&quot;).ToString]">
+          <ui:LogMessage DisplayName="Log Message : Pending exception" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[in_Config(&quot;PendingRecordRetriesDone&quot;).ToString]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <TryCatch sap2010:Annotation.AnnotationText="Take a screenshot of the current state of the screen to facilitate debugging." DisplayName="Try taking screenshot: Pending Record Status" sap:VirtualizedContainerService.HintSize="434,434" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch sap2010:Annotation.AnnotationText="Take a screenshot of the current state of the screen to facilitate debugging." DisplayName="Try taking screenshot: Pending Record Status" sap:VirtualizedContainerService.HintSize="434,240.66666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -620,10 +620,10 @@
               </ui:InvokeWorkflowFile>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,215.33333333333334" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -636,7 +636,7 @@
               </Catch>
             </TryCatch.Catches>
           </TryCatch>
-          <Assign DisplayName="Assign : Pending Screenshot Path to Config" sap:VirtualizedContainerService.HintSize="438.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_11">
+          <Assign DisplayName="Assign : Pending Screenshot Path to Config" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_11">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Object">[in_Config("ErrorScreenShotPath")]</OutArgument>
             </Assign.To>
@@ -644,7 +644,7 @@
               <InArgument x:TypeArguments="x:String">[strScreenshotPath]</InArgument>
             </Assign.Value>
           </Assign>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor Close Process Detail Window Pending" sap:VirtualizedContainerService.HintSize="438.6666666666667,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor Close Process Detail Window Pending" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -673,7 +673,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <Throw DisplayName="Throw SE: Pending Record found" Exception="[new SystemException(in_Config(&quot;PendingRecordRetriesBE&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="438.6666666666667,92" sap2010:WorkflowViewState.IdRef="Throw_6">
+          <Throw DisplayName="Throw SE: Pending Record found" Exception="[new SystemException(in_Config(&quot;PendingRecordRetriesBE&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="Throw_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
