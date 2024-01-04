@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>638.6666666666666,2716.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>857.3333333333334,2080.6666666666665</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SendEmail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -145,15 +145,15 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence: SendEmail" sap:VirtualizedContainerService.HintSize="648.6666666666666,2652" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence: SendEmail" sap:VirtualizedContainerService.HintSize="648.6666666666666,2016" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch: SendEmail" sap:VirtualizedContainerService.HintSize="586.6666666666666,2541.3333333333335" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch: SendEmail" sap:VirtualizedContainerService.HintSize="586.6666666666666,1905.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="This workflow sends an email for exception or success of the process." DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="548,2278.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence sap2010:Annotation.AnnotationText="This workflow sends an email for exception or success of the process." DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="548,1642.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="boolAttachmentFileExists" />
           </Sequence.Variables>
@@ -250,7 +250,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <If sap2010:Annotation.AnnotationText="Check if attachment is present or not." Condition="[in_strMailAttachment is Nothing]" DisplayName="If Attachment present" sap:VirtualizedContainerService.HintSize="486,1688.6666666666667" sap2010:WorkflowViewState.IdRef="If_2">
+          <If sap2010:Annotation.AnnotationText="Check if attachment is present or not." Condition="[in_strMailAttachment is Nothing]" DisplayName="If Attachment present" sap:VirtualizedContainerService.HintSize="410,1052.6666666666667" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -307,9 +307,6 @@
                 <If Condition="[boolAttachmentFileExists]" DisplayName="If Attachment File is found" sap:VirtualizedContainerService.HintSize="410,1025.3333333333333" sap2010:WorkflowViewState.IdRef="If_3">
                   <If.Then>
                     <Sequence sap:VirtualizedContainerService.HintSize="376,841.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="scg:List(x:String)" Name="listMailAttachments" />
-                      </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
