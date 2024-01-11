@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1153.3333333333333,3323.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>742.6666666666666,2446.6666666666665</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CheckAndValidateOkbatcnnQuery_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,15 +113,15 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence: CheckAndValidateQuery" sap:VirtualizedContainerService.HintSize="768.6666666666666,3258.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_13">
+  <Sequence DisplayName="Sequence: CheckAndValidateQuery" sap:VirtualizedContainerService.HintSize="752.6666666666666,2382" sap2010:WorkflowViewState.IdRef="Sequence_13">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch: CheckAndValidateQuery" sap:VirtualizedContainerService.HintSize="706.6666666666666,3148" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch: CheckAndValidateQuery" sap:VirtualizedContainerService.HintSize="690.6666666666666,2271.3333333333335" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="This process checks and validates if the Process List table has the required values and opens the Process Detail Pop up by clicking on OKBATCNN." DisplayName="CheckAndValidateQuery" sap:VirtualizedContainerService.HintSize="668,2885.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        <Sequence sap2010:Annotation.AnnotationText="This process checks and validates if the Process List table has the required values and opens the Process Detail Pop up by clicking on OKBATCNN." DisplayName="CheckAndValidateQuery" sap:VirtualizedContainerService.HintSize="652,2008.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="strURL" />
           </Sequence.Variables>
@@ -132,14 +132,14 @@
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message : Flow Started" sap:VirtualizedContainerService.HintSize="606,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;CheckValidateQueryWorkflowStarted&quot;).ToString]">
+          <ui:LogMessage DisplayName="Log Message : Flow Started" sap:VirtualizedContainerService.HintSize="590,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;CheckValidateQueryWorkflowStarted&quot;).ToString]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <Assign DisplayName="Assign : Peoplesoft Process Monitor URL" sap:VirtualizedContainerService.HintSize="606,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign DisplayName="Assign : Peoplesoft Process Monitor URL" sap:VirtualizedContainerService.HintSize="590,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[strURL]</OutArgument>
             </Assign.To>
@@ -147,13 +147,13 @@
               <InArgument x:TypeArguments="x:String">[in_Config("PeopleSoft_ProcessMonitorURL").ToString]</InArgument>
             </Assign.Value>
           </Assign>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Process Monitor" sap:VirtualizedContainerService.HintSize="606,2234.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="2c053e7e-45b1-411c-8bbc-ee10b14e5535" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Process Monitor" sap:VirtualizedContainerService.HintSize="590,1358" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="2c053e7e-45b1-411c-8bbc-ee10b14e5535" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Get Table contents" sap:VirtualizedContainerService.HintSize="572,2015.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                <Sequence DisplayName="Get Table contents" sap:VirtualizedContainerService.HintSize="556,1138.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="dt_QueryProcesses" />
                     <Variable x:TypeArguments="sd:DataTable" Name="dt_FilterData" />
@@ -163,14 +163,15 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState sap2010:Annotation.AnnotationText="Check if table for OKBATCNN job is present or not." DisplayName="Check App State 'Process List Table'" sap:VirtualizedContainerService.HintSize="510,99.33333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="2c053e7e-45b1-411c-8bbc-ee10b14e5535" Version="V3">
+                  <uix:NCheckState sap2010:Annotation.AnnotationText="Check if table for OKBATCNN job is present or not." DisplayName="Check App State 'Process List Table'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,528" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="2c053e7e-45b1-411c-8bbc-ee10b14e5535" Timeout="[cdbl(in_Config(&quot;TargetAppearWait&quot;))]" Version="V3">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,276" sap2010:WorkflowViewState.IdRef="Sequence_17">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -207,13 +208,13 @@
                     </uix:NCheckState.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NCheckState>
-                  <ui:FilterDataTable sap2010:Annotation.AnnotationText="Checks the count for the value we are looking for after filtering." DataTable="[dt_QueryProcesses]" DisplayName="Filter Data Table - Check OKBATCNN Query" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="510,99.33333333333333" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_FilterData]" SelectColumnsMode="Remove">
+                  <ui:FilterDataTable sap2010:Annotation.AnnotationText="Checks the count for the value we are looking for after filtering." DataTable="[dt_QueryProcesses]" DisplayName="Filter Data Table - Check OKBATCNN Query" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="494,99.33333333333333" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_FilterData]" SelectColumnsMode="Remove">
                     <ui:FilterDataTable.Filters>
                       <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                         <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -239,10 +240,10 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:FilterDataTable>
-                  <If sap2010:Annotation.AnnotationText="If there is only 1 row for the value in table we open it else we throw an error." Condition="[dt_FilterData.Rows.Count=1]" DisplayName="If (Check OKBATCNN Query)" sap:VirtualizedContainerService.HintSize="510,1421.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If sap2010:Annotation.AnnotationText="If there is only 1 row for the value in table we open it else we throw an error." Condition="[dt_FilterData.Rows.Count=1]" DisplayName="If (Check OKBATCNN Query)" sap:VirtualizedContainerService.HintSize="494,116" sap2010:WorkflowViewState.IdRef="If_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
@@ -272,7 +273,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:LogMessage DisplayName="Log Message: No Data" sap:VirtualizedContainerService.HintSize="434,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[in_Config(&quot;NoDataFound&quot;).ToString]" />
-                        <TryCatch sap2010:Annotation.AnnotationText="Take a screenshot of the current state of the screen to facilitate debugging." DisplayName="Try taking screenshot: NoSuccess Record Status" sap:VirtualizedContainerService.HintSize="434,99.33333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch sap2010:Annotation.AnnotationText="Take a screenshot of the current state of the screen to facilitate debugging." DisplayName="Try taking screenshot: OKBATCNN Data not found" sap:VirtualizedContainerService.HintSize="434,99.33333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -281,7 +282,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TakeScreenshot workflow : NoSuccess" sap:VirtualizedContainerService.HintSize="334,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TakeScreenshot workflow : OKBATCNN Data not found" sap:VirtualizedContainerService.HintSize="334,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InArgument x:TypeArguments="x:String" x:Key="in_Folder">[in_Config("ExScreenshotsFolderPath").ToString]</InArgument>
                                 <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">[strScreenshotPath]</InOutArgument>
@@ -300,12 +301,12 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                                 </ActivityAction.Argument>
-                                <ui:LogMessage DisplayName="Log message (NoSuccess Screenshot not taken)" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Warn" Message="[&quot;Failed to take screenshot: &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source+&quot; At Source: &quot;+Exception.Source]" />
+                                <ui:LogMessage DisplayName="Log message (NoSuccess Screenshot not taken)" sap:VirtualizedContainerService.HintSize="334,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Warn" Message="[&quot;Failed to take screenshot: &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source+&quot; At Source: &quot;+Exception.Source]" />
                               </ActivityAction>
                             </Catch>
                           </TryCatch.Catches>
                         </TryCatch>
-                        <Assign DisplayName="Assign : NoSuccess Screenshot Path to Config" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign DisplayName="Assign : OKBATCNN Data not found Screenshot Path to Config" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Object">[in_Config("ErrorScreenShotPath")]</OutArgument>
                           </Assign.To>
@@ -324,12 +325,12 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OKBATCNN Record'" sap:VirtualizedContainerService.HintSize="510,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c053e7e-45b1-411c-8bbc-ee10b14e5535" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OKBATCNN Record'" sap:VirtualizedContainerService.HintSize="494,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2c053e7e-45b1-411c-8bbc-ee10b14e5535" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://soklfpub-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklfpub-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklfpub-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklfpub-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklfpub-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="FVQVUS7qfkyvcpK-oFThuA" DesignTimeRectangle="722, 835, 121, 25" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'OKBATCNN Record'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl parentid='PMN_PRCSLIST$scroll$*' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='JOBDETAIL_BTN$*' tableRow='3' tag='A' aaname='OKBATCNN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl parentid='PMN_PRCSLIST$scroll$*' tag='TABLE' /&gt;&lt;webctrl id='JOBDETAIL_BTN$*' type='' tag='A' aaname='OKBATCNN' class='PSHYPERLINK' check:text='OKBATCNN' /&gt;" Guid="25641a5f-e99c-48dc-a760-9d8039b887bb" ImageBase64="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" Reference="ao86_PT9xkmS2L7lE3WumQ/Mk0C5UH9XUGMXr-jvV59hQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable BrowserURL="https://soklfpub-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklfpub-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklfpub-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklfpub-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklfpub-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="HN6axEYrfU6BZqlKQt9_VA" DesignTimeRectangle="724, 904, 121, 25" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'OKBATCNN Record'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl parentid='PMN_PRCSLIST$scroll$*' tag='TABLE' /&gt;&lt;webctrl id='JOBDETAIL_BTN$*' tag='A' aaname='OKBATCNN' visibleinnertext='OKBATCNN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl parentid='PMN_PRCSLIST$scroll$*' tag='TABLE' /&gt;&lt;webctrl id='JOBDETAIL_BTN$*' tag='A' aaname='OKBATCNN' visibleinnertext='OKBATCNN' type='' class='PSHYPERLINK' check:text='OKBATCNN' /&gt;" Guid="25641a5f-e99c-48dc-a760-9d8039b887bb" ImageBase64="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" InformativeScreenshot="a3aa917a349b85e3a75395e09c47fe18.png" Reference="ao86_PT9xkmS2L7lE3WumQ/Mk0C5UH9XUGMXr-jvV59hQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
                           <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="720, 760, 156, 29" ElementType="Text" FriendlyName="'OKBATCNN Record'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' type='' class='PSLEVEL1GRIDCOLUMNHDR' aaname='Process Name' check:innerText='Process Name' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                            <uix:Target DesignTimeRectangle="722, 760, 156, 29" ElementType="Text" FriendlyName="'OKBATCNN Record'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' type='' class='PSLEVEL1GRIDCOLUMNHDR' aaname='Process Name' check:innerText='Process Name' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
@@ -348,7 +349,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <ui:LogMessage DisplayName="Log Message : Flow Completed" sap:VirtualizedContainerService.HintSize="606,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;CheckValidateQueryWorkflowCompleted&quot;).ToString]">
+          <ui:LogMessage DisplayName="Log Message : Flow Completed" sap:VirtualizedContainerService.HintSize="590,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;CheckValidateQueryWorkflowCompleted&quot;).ToString]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -358,7 +359,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="672.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="656.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -381,7 +382,7 @@
             </Sequence>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="672.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="656.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
