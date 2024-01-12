@@ -179,7 +179,7 @@
               <InArgument x:TypeArguments="x:String">[in_Config("PeopleSoft_LoginURL").ToString]</InArgument>
             </Assign.Value>
           </Assign>
-          <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="[Convert.ToBoolean(in_Config(&quot;ContinueOnError&quot;))]" DisplayName="Edge: Oracle Dynamic Page" sap:VirtualizedContainerService.HintSize="434,304" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="69c83da4-2f49-4ca4-bef6-ab7800d73c22" Timeout="[cdbl(in_Config(&quot;TargetAppearWait&quot;))]" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="[Convert.ToBoolean(in_Config(&quot;ContinueOnError&quot;))]" DisplayName="Edge: Oracle Dynamic Page" sap:VirtualizedContainerService.HintSize="434,304" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="69c83da4-2f49-4ca4-bef6-ab7800d73c22" Timeout="[cdbl(in_Config(&quot;TargetAppearWait&quot;))]" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>

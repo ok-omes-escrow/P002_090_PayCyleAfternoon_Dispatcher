@@ -20516,9 +20516,9 @@
     "restore": {
       "projectUniqueName": "P002_090_PayCycleAfternoon_Dispatcher",
       "projectName": "P002_090_PayCycleAfternoon_Dispatcher",
-      "projectPath": "C:\\Users\\55651C\\Documents\\UiPath\\P002_090_PayCycleAfternoon_Dispatcher\\.local",
+      "projectPath": "C:\\Users\\55651C\\Documents\\GitHub\\P002_090_PayCyleAfternoon_Dispatcher\\.local",
       "packagesPath": "C:\\Users\\55651C\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\55651C\\Documents\\UiPath\\P002_090_PayCycleAfternoon_Dispatcher\\.local"
+      "outputPath": "C:\\Users\\55651C\\Documents\\GitHub\\P002_090_PayCyleAfternoon_Dispatcher\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {

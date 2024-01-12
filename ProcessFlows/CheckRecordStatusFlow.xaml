@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1040,4643.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>818,3644</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CheckRecordStatusFlow_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -108,7 +108,7 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow checks if there are any records with Pending or No success status and hence marks it as exception and data is not added to the queue, if there are no pending or NoSuccess records then the paycycle is added to queue." DisplayName="CheckRecordStatusFlow" sap:VirtualizedContainerService.HintSize="1050,4578.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow checks if there are any records with Pending or No success status and hence marks it as exception and data is not added to the queue, if there are no pending or NoSuccess records then the paycycle is added to queue." DisplayName="CheckRecordStatusFlow" sap:VirtualizedContainerService.HintSize="828,3539.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_16">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strViewLogTraceWindowCounter" />
       <Variable x:TypeArguments="x:Int32" Name="intNoSuccessFound" />
@@ -123,14 +123,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message : Check Status Workflow Started" sap:VirtualizedContainerService.HintSize="988,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;CheckRecordStatusWorkflowStarted&quot;).ToString]">
+    <ui:LogMessage DisplayName="Log Message : Check Status Workflow Started" sap:VirtualizedContainerService.HintSize="766,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;CheckRecordStatusWorkflowStarted&quot;).ToString]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:MultipleAssign DisplayName="Multiple Assign: Initialize" sap:VirtualizedContainerService.HintSize="988,131.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:MultipleAssign DisplayName="Multiple Assign: Initialize" sap:VirtualizedContainerService.HintSize="766,131.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -157,7 +157,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Check if element is present or not." AttachMode="ByInstance" DisplayName="Edge: Process Monitor Check Data Present" sap:VirtualizedContainerService.HintSize="988,556" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Check if element is present or not." AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Process Monitor Check Data Present" sap:VirtualizedContainerService.HintSize="766,84.66666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_12" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -188,7 +188,7 @@
               </Sequence>
             </uix:NCheckState.IfNotExists>
             <uix:NCheckState.Target>
-              <uix:TargetAnchorable BrowserURL="https://soklfpub-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?ICType=Panel&amp;ICElementNum=0&amp;ICStateNum=3&amp;ICResubmit=1&amp;ICAJAX=1&amp;" ContentHash="0U8zhPvfyUaX8Kl7nRH7rA" DesignTimeRectangle="1257, 309, 195, 26" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Refresh Button'" FullSelectorArgument="&lt;webctrl id='ptModFrame_?' tag='IFRAME' /&gt;&lt;webctrl id='ACE_width' tag='TABLE' /&gt;&lt;webctrl id='REFRESH_BTN' tag='INPUT' aaname='Refresh' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptModFrame_?' tag='IFRAME' /&gt;&lt;webctrl id='ACE_width' tag='TABLE' /&gt;&lt;webctrl id='REFRESH_BTN' tag='INPUT' aaname='Refresh' type='button' class='PSPUSHBUTTON' check:text='Refresh' /&gt;" Guid="9724ffcd-d8f3-4016-bcb2-01e798e98c26" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMcAAAAeCAYAAACYNAohAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAS8SURBVHhe7ZqxS+NQGMDvj7mpWze327J1cnPr5pahcDh0kdIlQ5cbdCici8JBuUE3u1gQjKVt0GIQr0cHi0iPInUotQ7ffe/le8lLmqS1JwjX7wdBeEnei+T75X3fe/0EDMPEwnIwTAIsB8MkwHIwTAIsB8MksMZy9KFkXsDnBUeu3AHrbABjuuvfeIZe3YHNQtD//i869RE8upAXz1HtUwOjw3KYNuT3rsA6mD+Klg1ZCmIDA2hKd67KtO1ARvRXaIJZFWO44LyPdavBcqTCcphNqD1SUxwDCiCUaN99pcbV6P20pWjFywm1fDAsRyosxyI5kJtDL6i/HA6oZTWcqhjvAkrX1PDRsBypsBxLyDGsN2VQxwbRqA+1agsMqiMyBRu2D3/DcEbnBddX3v2RI1//gyfpOap4T/sKtqgfw7qBG7+PFxheu1DS0ryNYgv22+L+GMYDOMFnymm1jYG10/fLx3BqqMsx+g3fK03YUP3v4vXtEV24nrAcC+V4ghPLCxjzPFwgTN0ubKpgKjtenVJGQUTbzhU4Knsa3Mlz5q537WbFq2mOXNEfPceODYY8h/1UO7CJsniB/IwzV9PrEw+vPnIgryTCwA4F/AT721HjeM9k7QXyGvrsp+TAsXP4N7vTgiJeX0JJlITm+RNdvH6wHIlyvMB09IBfYDsIdn02mKkgtLGG0L+wr3Bfb8l7MpW70CpXfFqlngMD/3hIbQFTnHW+yPEdaIz0mmcINV/aIICDuuaZWohJD4ooSG4XZyRq8uUQY/94CEkmFg/kuHj9PbWtGyzHEsdGuQvOOFyMj89a8lxmT33hddRs04Qj7UOdLkcHTudWroJZq9iOKeLHt7At7tUC2BtjycUDf+boBsL4DGBfyo8fBWpZN1iO6FKuSGkoBcl9u4Pe5IWu15lAY8+7ptSOD8L7Y69OydeDWSVVjrgAneHXXpwzHbCpKQzOHjJVa8EJDTM+71AKZoN54ELj1xCm+oyno+SwbrGnKH+ghimikLaRdP9/DssRl1ZNHuCIvtjx+xsqcC5gK2GPxMK8XZzXi/hUOcrufICq4C00ZS0QN46qY4I+n8HBGkXVDOowLAeOsCAPTU6q/7iFBv9/XLxg8b/CciS9fJGjU2Dl69GwDeRYeLyHHEsc4T6RyRCceje0kSmOjOUGNQTLkQrLkfLyp5cqRcHaoa+nTyqtelvgvFkOlVbtagG9EhO4v76Br7SK5dcvLEcqLEfqy3+C04oXUNHgVXsf22fLL3W+WQ4/QLGmmCvW48B0sGyDUYivE4I6iPZHWI5UWI5FL19LbUJr/n7a1YLaIFK0zx69ZdaCDSVtSfXtcgSzl0yHogFPP23JimVeORm8+rv5+ePoP4XFuwx2O/ixI8uRCsux8OW/Qu8nFddi5UZbURV7EGLzTJwTBa8skrUNt6x1G0qHVpFDFtgHtNcidt9pAUCvJbb1mkjbBMwWO1CShXvCpiHLkQrLsczLn/XBooAzDiKrV/SzCyWEvIZ+qhHNhFaTQ/ACw3YXTEyZ/OIaRdmqdKExiMm3Vvn5yBwsxxrLwTDpsBwMkwDLwTAJsBwMkwDLwTAJsBwMkwDLwTAJsBwMkwDLwTCxAPwFPMBnBszqjIcAAAAASUVORK5CYII=" InformativeScreenshot="e6a022a4f8d53b9bee1ce2e2904d126c.png" Reference="ao86_PT9xkmS2L7lE3WumQ/_iu-QeygAEuVCLJaTcej5Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+              <uix:TargetAnchorable BrowserURL="https://soklfpub-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?ICType=Panel&amp;ICElementNum=0&amp;ICStateNum=3&amp;ICResubmit=1&amp;ICAJAX=1&amp;" ContentHash="bnbPQhEa2ky4s2F-56-RZg" DesignTimeRectangle="1257, 309, 195, 26" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Refresh Button'" FullSelectorArgument="&lt;webctrl id='ptModFrame_*' tag='IFRAME' /&gt;&lt;webctrl id='ACE_width' tag='TABLE' /&gt;&lt;webctrl id='REFRESH_BTN' tag='INPUT' aaname='Refresh' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptModFrame_0' tag='IFRAME' /&gt;&lt;webctrl id='ACE_width' tag='TABLE' /&gt;&lt;webctrl id='REFRESH_BTN' type='button' tag='INPUT' class='PSPUSHBUTTON' aaname='Refresh' check:text='Refresh' /&gt;" Guid="9724ffcd-d8f3-4016-bcb2-01e798e98c26" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMcAAAAeCAYAAACYNAohAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAS8SURBVHhe7ZqxS+NQGMDvj7mpWze327J1cnPr5pahcDh0kdIlQ5cbdCici8JBuUE3u1gQjKVt0GIQr0cHi0iPInUotQ7ffe/le8lLmqS1JwjX7wdBeEnei+T75X3fe/0EDMPEwnIwTAIsB8MkwHIwTAIsB8MksMZy9KFkXsDnBUeu3AHrbABjuuvfeIZe3YHNQtD//i869RE8upAXz1HtUwOjw3KYNuT3rsA6mD+Klg1ZCmIDA2hKd67KtO1ARvRXaIJZFWO44LyPdavBcqTCcphNqD1SUxwDCiCUaN99pcbV6P20pWjFywm1fDAsRyosxyI5kJtDL6i/HA6oZTWcqhjvAkrX1PDRsBypsBxLyDGsN2VQxwbRqA+1agsMqiMyBRu2D3/DcEbnBddX3v2RI1//gyfpOap4T/sKtqgfw7qBG7+PFxheu1DS0ryNYgv22+L+GMYDOMFnymm1jYG10/fLx3BqqMsx+g3fK03YUP3v4vXtEV24nrAcC+V4ghPLCxjzPFwgTN0ubKpgKjtenVJGQUTbzhU4Knsa3Mlz5q537WbFq2mOXNEfPceODYY8h/1UO7CJsniB/IwzV9PrEw+vPnIgryTCwA4F/AT721HjeM9k7QXyGvrsp+TAsXP4N7vTgiJeX0JJlITm+RNdvH6wHIlyvMB09IBfYDsIdn02mKkgtLGG0L+wr3Bfb8l7MpW70CpXfFqlngMD/3hIbQFTnHW+yPEdaIz0mmcINV/aIICDuuaZWohJD4ooSG4XZyRq8uUQY/94CEkmFg/kuHj9PbWtGyzHEsdGuQvOOFyMj89a8lxmT33hddRs04Qj7UOdLkcHTudWroJZq9iOKeLHt7At7tUC2BtjycUDf+boBsL4DGBfyo8fBWpZN1iO6FKuSGkoBcl9u4Pe5IWu15lAY8+7ptSOD8L7Y69OydeDWSVVjrgAneHXXpwzHbCpKQzOHjJVa8EJDTM+71AKZoN54ELj1xCm+oyno+SwbrGnKH+ghimikLaRdP9/DssRl1ZNHuCIvtjx+xsqcC5gK2GPxMK8XZzXi/hUOcrufICq4C00ZS0QN46qY4I+n8HBGkXVDOowLAeOsCAPTU6q/7iFBv9/XLxg8b/CciS9fJGjU2Dl69GwDeRYeLyHHEsc4T6RyRCceje0kSmOjOUGNQTLkQrLkfLyp5cqRcHaoa+nTyqtelvgvFkOlVbtagG9EhO4v76Br7SK5dcvLEcqLEfqy3+C04oXUNHgVXsf22fLL3W+WQ4/QLGmmCvW48B0sGyDUYivE4I6iPZHWI5UWI5FL19LbUJr/n7a1YLaIFK0zx69ZdaCDSVtSfXtcgSzl0yHogFPP23JimVeORm8+rv5+ePoP4XFuwx2O/ixI8uRCsux8OW/Qu8nFddi5UZbURV7EGLzTJwTBa8skrUNt6x1G0qHVpFDFtgHtNcidt9pAUCvJbb1mkjbBMwWO1CShXvCpiHLkQrLsczLn/XBooAzDiKrV/SzCyWEvIZ+qhHNhFaTQ/ACw3YXTEyZ/OIaRdmqdKExiMm3Vvn5yBwsxxrLwTDpsBwMkwDLwTAJsBwMkwDLwTAJsBwMkwDLwTAJsBwMkwDLwTCxAPwFPMBnBszqjIcAAAAASUVORK5CYII=" InformativeScreenshot="e6a022a4f8d53b9bee1ce2e2904d126c.png" Reference="ao86_PT9xkmS2L7lE3WumQ/_iu-QeygAEuVCLJaTcej5Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                 <uix:TargetAnchorable.Anchors>
                   <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                     <uix:Target DesignTimeRectangle="611, 315, 121, 25" ElementType="Text" FriendlyName="'Refresh Button'" FullSelectorArgument="&lt;webctrl id='ptModFrame_0' tag='IFRAME' /&gt;&lt;webctrl id='ACE_width' tag='TABLE' /&gt;&lt;webctrl id='PMN_PRCSLIST_PRCSNAME' tableRow='4' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptModFrame_0' tag='IFRAME' /&gt;&lt;webctrl id='ACE_width' tag='TABLE' /&gt;&lt;webctrl id='PMN_PRCSLIST_PRCSNAME' type='' tag='SPAN' class='PSEDITBOX_DISPONLY' aaname='OKBATCNN' check:innerText='OKBATCNN' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH0AAAAdCAYAAACHdGN/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABnSURBVGhD7dQBCcBAEAPB8++whTp4auFeyOxAFCxkNpyig4oOKjqo6KCig4oOKjqo6KCig4oOKjqo6KA5599mbZ7322atewcVHVR0UNFBRQcVHVR0UNFBRQcVHVR0UNFBRQcVnbN7AfQsHpE4+my1AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
@@ -210,16 +210,16 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:RetryScope sap2010:Annotation.AnnotationText="THis retry scope checks if there are records with Pending status then it is retried else we move out of the retry scope." ContinueOnError="[Convert.ToBoolean(in_Config(&quot;RetryScopeContinueOnError&quot;))]" DisplayName="Retry Scope: Check Pending" sap:VirtualizedContainerService.HintSize="988,2970.6666666666665" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[cint(in_Config(&quot;PendingRetries&quot;))]" RetryInterval="[TimeSpan.Parse(in_Config(&quot;DelayPendingRecords&quot;).ToString)]">
+    <ui:RetryScope sap2010:Annotation.AnnotationText="THis retry scope checks if there are records with Pending status then it is retried else we move out of the retry scope." ContinueOnError="[Convert.ToBoolean(in_Config(&quot;RetryScopeContinueOnError&quot;))]" DisplayName="Retry Scope: Check Pending" sap:VirtualizedContainerService.HintSize="766,2402.6666666666665" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[cint(in_Config(&quot;PendingRetries&quot;))]" RetryInterval="[TimeSpan.Parse(in_Config(&quot;DelayPendingRecords&quot;).ToString)]">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="724,2646" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="724,2078" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ienumTableRows" />
             </Sequence.Variables>
@@ -251,7 +251,7 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor Get Table OKBATCNN" sap:VirtualizedContainerService.HintSize="662,622" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Process Monitor Get Table OKBATCNN" sap:VirtualizedContainerService.HintSize="662,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -294,7 +294,7 @@
               </uix:NApplicationCard.TargetApp>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -326,14 +326,14 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="476,356.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <Sequence sap:VirtualizedContainerService.HintSize="476,357.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_20">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:LogMessage DisplayName="Log Message: NoSuccess Found" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;NoSuccessRecordFound&quot;).ToString]" />
-                          <Assign DisplayName="Assign : No Success Count Increment" sap:VirtualizedContainerService.HintSize="434,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_7">
+                          <Assign DisplayName="Assign : No Success Count Increment" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Int32">[intNoSuccessFound]</OutArgument>
                             </Assign.To>
@@ -469,7 +469,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <If sap2010:Annotation.AnnotationText="If NoSuccess record was found then exception is thrown." Condition="[intNoSuccessFound&gt;0]" DisplayName="If No Success Throw Error" sap:VirtualizedContainerService.HintSize="988,116" sap2010:WorkflowViewState.IdRef="If_7">
+    <If sap2010:Annotation.AnnotationText="If NoSuccess record was found then exception is thrown." Condition="[intNoSuccessFound&gt;0]" DisplayName="If No Success Throw Error" sap:VirtualizedContainerService.HintSize="766,116" sap2010:WorkflowViewState.IdRef="If_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -533,7 +533,7 @@
               <InArgument x:TypeArguments="x:String">[strScreenshotPath]</InArgument>
             </Assign.Value>
           </Assign>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor Close Process Detail Window NoSuccess" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Process Monitor Close Process Detail Window NoSuccess" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -581,7 +581,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If sap2010:Annotation.AnnotationText="If pending record is present even after retries exception is thrown." Condition="[intPendingFound&gt;0]" DisplayName="If Pending Throw Error" sap:VirtualizedContainerService.HintSize="492,116" sap2010:WorkflowViewState.IdRef="If_8">
+    <If sap2010:Annotation.AnnotationText="If pending record is present even after retries exception is thrown." Condition="[intPendingFound&gt;0]" DisplayName="If Pending Throw Error" sap:VirtualizedContainerService.HintSize="766,116" sap2010:WorkflowViewState.IdRef="If_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -644,7 +644,7 @@
               <InArgument x:TypeArguments="x:String">[strScreenshotPath]</InArgument>
             </Assign.Value>
           </Assign>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor Close Process Detail Window Pending" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Process Monitor Close Process Detail Window Pending" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -692,7 +692,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor Close Process Detail Window Success" sap:VirtualizedContainerService.HintSize="492,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_14" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Process Monitor Close Process Detail Window Success" sap:VirtualizedContainerService.HintSize="766,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_14" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b20d00b2-a707-461c-8857-14ea29ba8aef" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -721,7 +721,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message : Check Status Workflow Completed" sap:VirtualizedContainerService.HintSize="492,54" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;CheckRecordStatusWorkflowCompleted&quot;).ToString]">
+    <ui:LogMessage DisplayName="Log Message : Check Status Workflow Completed" sap:VirtualizedContainerService.HintSize="766,54" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;CheckRecordStatusWorkflowCompleted&quot;).ToString]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
