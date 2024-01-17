@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0ct55BwlK/w88+cY5JoAMZIpOgC2P41R8AtH+m5czWN/+LE7B+PRZqbaZM+eo3i6hSCVu2PcfDmcI5OuUKBCxQ==",
+  "dgSpecHash": "GQiWbtWvFoaQxhDCOjSENvcg19QgeSi9sE+PgERK63uO5aoGmcG2PMpjYVY6UcTgqSyFdUVGoE9bVEG8fZEv5g==",
   "success": true,
   "projectFilePath": "C:\\Users\\55651C\\Documents\\GitHub\\P002_090_PayCyleAfternoon_Dispatcher\\.local\\",
   "expectedPackageFiles": [
@@ -11,8 +11,8 @@
     "C:\\Users\\55651C\\.nuget\\packages\\excelnumberformat\\1.0.10\\excelnumberformat.1.0.10.nupkg.sha512",
     "C:\\Users\\55651C\\.nuget\\packages\\lib_o365mailactivities_00.00\\1.0.3\\lib_o365mailactivities_00.00.1.0.3.nupkg.sha512",
     "C:\\Users\\55651C\\.nuget\\packages\\lib_o365mailactivities_00.00.library.runtime\\1.0.3\\lib_o365mailactivities_00.00.library.runtime.1.0.3.nupkg.sha512",
-    "C:\\Users\\55651C\\.nuget\\packages\\lib_peoplesoft_9.2\\1.0.1-alpha.30\\lib_peoplesoft_9.2.1.0.1-alpha.30.nupkg.sha512",
-    "C:\\Users\\55651C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.1-alpha.30\\lib_peoplesoft_9.2.library.runtime.1.0.1-alpha.30.nupkg.sha512",
+    "C:\\Users\\55651C\\.nuget\\packages\\lib_peoplesoft_9.2\\1.0.1-alpha.32\\lib_peoplesoft_9.2.1.0.1-alpha.32.nupkg.sha512",
+    "C:\\Users\\55651C\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.1-alpha.32\\lib_peoplesoft_9.2.library.runtime.1.0.1-alpha.32.nupkg.sha512",
     "C:\\Users\\55651C\\.nuget\\packages\\markdig.signed\\0.21.1\\markdig.signed.0.21.1.nupkg.sha512",
     "C:\\Users\\55651C\\.nuget\\packages\\microsoft.applicationinsights\\2.15.0\\microsoft.applicationinsights.2.15.0.nupkg.sha512",
     "C:\\Users\\55651C\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
