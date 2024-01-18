@@ -144,7 +144,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <l:Refresh_Process_Monitor DisplayName="Refresh Process Monitor : Refresh" sap:VirtualizedContainerService.HintSize="388,302.6666666666667" sap2010:WorkflowViewState.IdRef="Refresh_Process_Monitor_2" in_intDuration="[cint(in_Config(&quot;RefreshMonitorDuration&quot;))]" in_strDurationType="[in_Config(&quot;RefreshMonitorDurationType&quot;).ToString]" in_strFilterUserID="[in_Config(&quot;RefreshMonitorUserID&quot;).ToString]" in_strPeoplesoftURL="[in_Config(&quot;PeopleSoft_ProcessMonitorURL&quot;).ToString]" in_strRefreshButtonException="[in_Config(&quot;RefreshButtonNotFoundSE&quot;).ToString]" />
+          <l:Refresh_Process_Monitor DisplayName="Refresh Process Monitor : Refresh" sap:VirtualizedContainerService.HintSize="388,302.6666666666667" sap2010:WorkflowViewState.IdRef="Refresh_Process_Monitor_2" in_intDuration="[cint(in_Config(&quot;RefreshMonitorDuration&quot;))]" in_strDurationType="[in_Config(&quot;RefreshMonitorDurationType&quot;).ToString]" in_strFilterUserID="[in_Config(&quot;RefreshMonitorUserID&quot;).ToString]" in_strPeoplesoftURL="[in_Config(&quot;PeopleSoft_NavigationURL&quot;).ToString]" in_strRefreshButtonException="[in_Config(&quot;RefreshButtonNotFoundSE&quot;).ToString]" />
           <ui:LogMessage DisplayName="Log Message: Workflow Completed" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;UpdateUserIDandRefreshWorkflowCompleted&quot;).ToString]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -166,7 +166,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="450,320.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="450,231.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
