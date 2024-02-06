@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SendEmail" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:LIB_O365MailActivities_00_00;assembly=LIB_O365MailActivities_00.00" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SendEmail" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:LIB_GraphAPI;assembly=LIB_GraphAPI" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_strMailSubject" Type="InArgument(x:String)" />
     <x:Property Name="in_strMailAttachment" Type="InArgument(x:String)" />
@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>857.3333333333334,2080.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1153.3333333333333,3554.6666666666665</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SendEmail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -67,6 +67,7 @@
       <x:String>UiPath.UIAutomationNext.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>LIB_GraphAPI</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -143,17 +144,18 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>LIB_GraphAPI</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence: SendEmail" sap:VirtualizedContainerService.HintSize="648.6666666666666,2016" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence: SendEmail" sap:VirtualizedContainerService.HintSize="648.6666666666666,3490" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch: SendEmail" sap:VirtualizedContainerService.HintSize="586.6666666666666,1905.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch: SendEmail" sap:VirtualizedContainerService.HintSize="586.6666666666666,3379.3333333333335" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="This workflow sends an email for exception or success of the process." DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="548,1642.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence sap2010:Annotation.AnnotationText="This workflow sends an email for exception or success of the process." DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="548,3116.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="boolAttachmentFileExists" />
           </Sequence.Variables>
@@ -250,7 +252,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <If sap2010:Annotation.AnnotationText="Check if attachment is present or not." Condition="[in_strMailAttachment is Nothing]" DisplayName="If Attachment present" sap:VirtualizedContainerService.HintSize="410,1052.6666666666667" sap2010:WorkflowViewState.IdRef="If_2">
+          <If sap2010:Annotation.AnnotationText="Check if attachment is present or not." Condition="[in_strMailAttachment is Nothing]" DisplayName="If Attachment present" sap:VirtualizedContainerService.HintSize="486,2526.6666666666665" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -272,7 +274,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <l:Send_Email ApplicationID_Asset_Name="[in_Config(&quot;GraphAPIO365ApplicationID&quot;).ToString]" Application_Secret_Asset_Name="[in_Config(&quot;GraphAPIApplicationSecret&quot;).ToString]" Attachment_List="[New List(of String)]" CC_Email_Account="[in_strMailRecepientsCC.Split(&quot;;&quot;)]" DisplayName="Send Email: Without Attachment" From_Email_Account="[in_Config(&quot;BotEmailAddress&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,566" sap2010:WorkflowViewState.IdRef="Send_Email_3" Mail_Body="[in_strMailBody]" Mail_Subject="[in_strMailSubject]" Orchestrator_Folder_Path="[in_Config(&quot;OrchestratorGraphAPIAssetsFolder&quot;).ToString]" TenantID_Asset_Name="[in_Config(&quot;GraphAPIO365TenantID&quot;).ToString]" To_Email_Account="[in_strMailRecepients.Split(&quot;;&quot;)]">
+                <l:Send_Email DisplayName="Send Email: Without Attachment" sap:VirtualizedContainerService.HintSize="334,566" sap2010:WorkflowViewState.IdRef="Send_Email_5" in_listOfAttachment="[New List(of String)]" in_strApplicationIDAssetName="[in_Config(&quot;GraphAPIO365ApplicationID&quot;).ToString]" in_strApplicationSecretAssetName="[in_Config(&quot;GraphAPIApplicationSecret&quot;).ToString]" in_strFromEmailAccount="[in_Config(&quot;BotEmailAddress&quot;).ToString]" in_strMailBody="[in_strMailBody]" in_strMailRecipientCC="[in_strMailRecepientsCC.Split(&quot;;&quot;)]" in_strMailRecipientTo="[in_strMailRecepients.Split(&quot;;&quot;)]" in_strMailSubject="[in_strMailSubject]" in_strOrchestratorFolderPath="[in_Config(&quot;OrchestratorGraphAPIAssetsFolder&quot;).ToString]" in_strTenantIDAssetName="[in_Config(&quot;GraphAPIO365TenantID&quot;).ToString]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -320,7 +322,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LogMessage>
-                      <l:Send_Email ApplicationID_Asset_Name="[in_Config(&quot;GraphAPIO365ApplicationID&quot;).ToString]" Application_Secret_Asset_Name="[in_Config(&quot;GraphAPIApplicationSecret&quot;).ToString]" Attachment_List="[new list(of string) from {in_strMailAttachment}]" CC_Email_Account="[in_strMailRecepientsCC.Split(&quot;;&quot;)]" DisplayName="Send Email: With Attachment" From_Email_Account="[in_Config(&quot;BotEmailAddress&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,566" sap2010:WorkflowViewState.IdRef="Send_Email_4" Mail_Body="[in_strMailBody]" Mail_Subject="[in_strMailSubject]" Orchestrator_Folder_Path="[in_Config(&quot;OrchestratorGraphAPIAssetsFolder&quot;).ToString]" TenantID_Asset_Name="[in_Config(&quot;GraphAPIO365TenantID&quot;).ToString]" To_Email_Account="[in_strMailRecepients.Split(&quot;;&quot;)]">
+                      <l:Send_Email DisplayName="Send Email: With Attachment" sap:VirtualizedContainerService.HintSize="334,566" sap2010:WorkflowViewState.IdRef="Send_Email_6" in_listOfAttachment="[new list(of string) from {in_strMailAttachment}]" in_strApplicationIDAssetName="[in_Config(&quot;GraphAPIO365ApplicationID&quot;).ToString]" in_strApplicationSecretAssetName="[in_Config(&quot;GraphAPIApplicationSecret&quot;).ToString]" in_strFromEmailAccount="[in_Config(&quot;BotEmailAddress&quot;).ToString]" in_strMailBody="[in_strMailBody]" in_strMailRecipientCC="[in_strMailRecepientsCC.Split(&quot;;&quot;)]" in_strMailRecipientTo="[in_strMailRecepients.Split(&quot;;&quot;)]" in_strMailSubject="[in_strMailSubject]" in_strOrchestratorFolderPath="[in_Config(&quot;OrchestratorGraphAPIAssetsFolder&quot;).ToString]" in_strTenantIDAssetName="[in_Config(&quot;GraphAPIO365TenantID&quot;).ToString]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -409,7 +411,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="450,231.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="450,320.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>

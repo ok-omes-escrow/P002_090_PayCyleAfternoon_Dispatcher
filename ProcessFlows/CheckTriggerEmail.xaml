@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CheckTriggerEmail" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:LIB_O365MailActivities_00_00;assembly=LIB_O365MailActivities_00.00" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umm="clr-namespace:UiPath.MicrosoftOffice365.Models;assembly=UiPath.MicrosoftOffice365" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CheckTriggerEmail" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:LIB_GraphAPI;assembly=LIB_GraphAPI" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umm="clr-namespace:UiPath.MicrosoftOffice365.Models;assembly=UiPath.MicrosoftOffice365" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>857.3333333333334,2397.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1153.3333333333333,1521.3333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NavigateToProcessMonitor_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -64,6 +64,10 @@
       <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
       <x:String>UiPath.MicrosoftOffice365.Mail.Enums</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities.Filters</x:String>
+      <x:String>LIB_GraphAPI</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -129,17 +133,26 @@
       <AssemblyReference>LIB_O365MailActivities_00.00</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>LIB_GraphAPI</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence: CheckTriggerEmail" sap:VirtualizedContainerService.HintSize="585.3333333333334,2332.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Sequence: CheckTriggerEmail" sap:VirtualizedContainerService.HintSize="585.3333333333334,1456.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch: CheckTriggerEmail" sap:VirtualizedContainerService.HintSize="523.3333333333334,2222" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch: CheckTriggerEmail" sap:VirtualizedContainerService.HintSize="523.3333333333334,1346" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="This process checks for the trigger email in Outlook default mailbox with the help of subject line and current date." DisplayName="CheckTriggerEmail" sap:VirtualizedContainerService.HintSize="484.6666666666667,1959.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap2010:Annotation.AnnotationText="This process checks for the trigger email in Outlook default mailbox with the help of subject line and current date." DisplayName="CheckTriggerEmail" sap:VirtualizedContainerService.HintSize="484.6666666666667,1083.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Default="False" Name="boolMailFound" />
             <Variable x:TypeArguments="x:String" Name="strMailFilterStartTime" />
@@ -196,14 +209,15 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:MultipleAssign>
-          <l:Read_Email Email_Retrieval_Count="{x:Null}" ApplicationID_Asset_Name="[in_Config(&quot;GraphAPIO365ApplicationID&quot;).ToString]" Application_Secret_Asset_Name="[in_Config(&quot;GraphAPIApplicationSecret&quot;).ToString]" DisplayName="Read Email: Trigger Email (Read_Email)" Email_Account="[in_Config(&quot;BotEmailAddress&quot;).ToString]" Email_Filter="[&quot;subject eq '&quot;+ strMailSubject+ &quot;' and ReceivedDateTime ge &quot; + strMailFilterStartTime]" Email_Folder="[in_Config(&quot;OutlookTriggerEmailFolderName&quot;).ToString]" sap:VirtualizedContainerService.HintSize="422.6666666666667,566" sap2010:WorkflowViewState.IdRef="Read_Email_4" Mark_Email_As_Read="[convert.ToBoolean(in_Config(&quot;MarkEmailAsRead&quot;))]" Orchestrator_Folder_Path="[in_Config(&quot;OrchestratorGraphAPIAssetsFolder&quot;).ToString]" Result_Email_List="[mailarrInboxMails]" TenantID_Asset_Name="[in_Config(&quot;GraphAPIO365TenantID&quot;).ToString]">
+          <l:Read_Email in_intEmailRetrievalCount="{x:Null}" DisplayName="Read Email: Trigger Email" sap:VirtualizedContainerService.HintSize="422.6666666666667,54" sap2010:WorkflowViewState.IdRef="Read_Email_5" in_boolMarkEmailAsRead="[convert.ToBoolean(in_Config(&quot;MarkEmailAsRead&quot;))]" in_strApplicationIDAssetName="[in_Config(&quot;GraphAPIO365ApplicationID&quot;).ToString]" in_strApplicationSecretAssetName="[in_Config(&quot;GraphAPIApplicationSecret&quot;).ToString]" in_strEmailAccount="[in_Config(&quot;BotEmailAddress&quot;).ToString]" in_strEmailFilter="[&quot;subject eq '&quot;+ strMailSubject+ &quot;' and ReceivedDateTime ge &quot; + strMailFilterStartTime]" in_strEmailFolder="[in_Config(&quot;OutlookTriggerEmailFolderName&quot;).ToString]" in_strOrchestratorFolderPath="[in_Config(&quot;OrchestratorGraphAPIAssetsFolder&quot;).ToString]" in_strTenantIDAssetName="[in_Config(&quot;GraphAPIO365TenantID&quot;).ToString]" out_listEmailResult="[mailarrInboxMails]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </l:Read_Email>
-          <If Condition="[mailarrInboxMails.Count=1]" DisplayName="If Mail Found" sap:VirtualizedContainerService.HintSize="422.6666666666667,780" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[mailarrInboxMails.Count=1]" DisplayName="If Mail Found" sap:VirtualizedContainerService.HintSize="422.6666666666667,416" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
               <Sequence sap:VirtualizedContainerService.HintSize="376,232" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>

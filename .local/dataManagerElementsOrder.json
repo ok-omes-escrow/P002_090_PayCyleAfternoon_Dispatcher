@@ -173,11 +173,11 @@
       "Path": "Framework/SetTransactionStatus.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "ScreenshotPath&Flowchart_2",
-        "strEmailCC&Flowchart_2",
-        "strEmailRecipient&Flowchart_2",
-        "strMailSubject&Flowchart_2",
         "strMailBody&Flowchart_2",
+        "strMailSubject&Flowchart_2",
+        "strEmailRecipient&Flowchart_2",
+        "strEmailCC&Flowchart_2",
+        "ScreenshotPath&Flowchart_2",
         "QueueRetry&Sequence_17"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -186,11 +186,11 @@
         "in_TransactionField2",
         "in_TransactionID",
         "in_SystemException",
-        "in_Config",
         "in_TransactionItem",
         "io_RetryNumber",
         "io_TransactionNumber",
-        "io_ConsecutiveSystemExceptions"
+        "io_ConsecutiveSystemExceptions",
+        "in_Config"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -331,6 +331,8 @@
         "strExceptionNumber&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "argument2",
+        "argument1",
         "in_strExceptionMessage",
         "out_strEmailBody",
         "out_strEmailSubject",
@@ -351,6 +353,21 @@
       "ArgumentsSectionElementsOrder": [
         "in_Folder",
         "io_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ProcessFlows/CreateLocalFolder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strLocalProjectFolderPath&Sequence_1",
+        "strLocalRootFolder&Sequence_1",
+        "strExceptionSSFolderPath&Sequence_1",
+        "boolLocalFolderExists&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
