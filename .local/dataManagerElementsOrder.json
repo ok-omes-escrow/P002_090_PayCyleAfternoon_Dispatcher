@@ -331,8 +331,6 @@
         "strExceptionNumber&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "argument2",
-        "argument1",
         "in_strExceptionMessage",
         "out_strEmailBody",
         "out_strEmailSubject",
