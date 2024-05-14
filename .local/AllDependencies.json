@@ -20562,15 +20562,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\55651C\\.nuget\\packages\\": {}
+    "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "P002_090_PayCycleAfternoon_Dispatcher",
       "projectName": "P002_090_PayCycleAfternoon_Dispatcher",
-      "projectPath": "C:\\Users\\55651C\\Documents\\GitHub\\P002_090_PayCyleAfternoon_Dispatcher\\.local",
-      "packagesPath": "C:\\Users\\55651C\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\55651C\\Documents\\GitHub\\P002_090_PayCyleAfternoon_Dispatcher\\.local"
+      "projectPath": "C:\\Users\\svc_prod.robot01\\Documents\\UiPath\\P002_090_PayCyleAfternoon_Dispatcher\\.local",
+      "packagesPath": "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\svc_prod.robot01\\Documents\\UiPath\\P002_090_PayCyleAfternoon_Dispatcher\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {
