@@ -32,6 +32,7 @@
         "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_BypassEmailTrigger",
         "in_OrchestratorQueueName",
         "in_OrchestratorQueueFolder"
       ],
@@ -153,7 +154,6 @@
         "mailarrInboxMails&Sequence_3"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_BypassTriggerEmail",
         "in_Config"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -289,6 +289,7 @@
       "Path": "ProcessFlows/CheckRecordStatusFlow.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "variable1&Sequence_16",
         "strScreenshotPath&Sequence_16",
         "strURL&Sequence_16",
         "ienumTableRows&Sequence_17",
