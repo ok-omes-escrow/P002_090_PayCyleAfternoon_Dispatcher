@@ -32,7 +32,6 @@
         "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_BypassEmailTrigger",
         "in_OrchestratorQueueName",
         "in_OrchestratorQueueFolder"
       ],
@@ -289,17 +288,19 @@
       "Path": "ProcessFlows/CheckRecordStatusFlow.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "boolNoSuccessMatch&Sequence_37",
+        "boolPendingMatch&Sequence_37",
+        "arrStatusCheck&Sequence_39",
+        "strRecord&Sequence_39",
+        "intRowNum&Sequence_16",
+        "intConsecutiveFailure&Sequence_37",
         "variable1&Sequence_16",
         "strScreenshotPath&Sequence_16",
         "strURL&Sequence_16",
         "ienumTableRows&Sequence_17",
         "strViewLogTraceWindowCounter&Sequence_16",
         "intNoSuccessFound&Sequence_16",
-        "intPendingFound&Sequence_16",
-        "strTableValue&Sequence_18",
-        "boolNoSuccessMatch&Sequence_18",
-        "strTableValuePending&Sequence_19",
-        "boolPendingMatch&Sequence_19"
+        "intPendingFound&Sequence_16"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_Config"

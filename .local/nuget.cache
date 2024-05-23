@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sYzheUKroImCJARQqA6crVEXjwa8YpjKYJKJgf/AkneJZK/gSqJnvGaNcn9C1qsmuS5FDQm9+wgsE9A/elps/w==",
+  "dgSpecHash": "d99aww6HznxOqWptwi00PueyX6cmAj48Nl33JwhAUtE80JT/QYgInHA+d1APQHwFD+dqMtA59q/f6iBjlyrCkg==",
   "success": true,
   "projectFilePath": "C:\\Users\\svc_prod.robot01\\Documents\\UiPath\\P002_090_PayCyleAfternoon_Dispatcher\\.local\\",
   "expectedPackageFiles": [
@@ -9,10 +9,10 @@
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\documentformat.openxml\\2.12.1\\documentformat.openxml.2.12.1.nupkg.sha512",
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\excelnumberformat\\1.0.10\\excelnumberformat.1.0.10.nupkg.sha512",
-    "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\lib_graphapi_1.0\\1.0.1-alpha.2\\lib_graphapi_1.0.1.0.1-alpha.2.nupkg.sha512",
-    "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\lib_graphapi_1.0.library.runtime\\1.0.1-alpha.2\\lib_graphapi_1.0.library.runtime.1.0.1-alpha.2.nupkg.sha512",
-    "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\lib_peoplesoft_9.2\\1.0.1\\lib_peoplesoft_9.2.1.0.1.nupkg.sha512",
-    "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.1\\lib_peoplesoft_9.2.library.runtime.1.0.1.nupkg.sha512",
+    "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\lib_graphapi_1.0\\1.0.1\\lib_graphapi_1.0.1.0.1.nupkg.sha512",
+    "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\lib_graphapi_1.0.library.runtime\\1.0.1\\lib_graphapi_1.0.library.runtime.1.0.1.nupkg.sha512",
+    "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\lib_peoplesoft_9.2\\1.0.2\\lib_peoplesoft_9.2.1.0.2.nupkg.sha512",
+    "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\lib_peoplesoft_9.2.library.runtime\\1.0.2\\lib_peoplesoft_9.2.library.runtime.1.0.2.nupkg.sha512",
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\markdig.signed\\0.21.1\\markdig.signed.0.21.1.nupkg.sha512",
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\microsoft.applicationinsights\\2.15.0\\microsoft.applicationinsights.2.15.0.nupkg.sha512",
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
