@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>857.3333333333334,3106</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>857.3333333333334,3198</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoginToPeopleSoftSeq_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,7 +119,7 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This process is to fetch credentials from Orchestrator and login to People soft application." DisplayName="LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="624,3001.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_11">
+  <Sequence sap2010:Annotation.AnnotationText="This process is to fetch credentials from Orchestrator and login to People soft application." DisplayName="LoginToPeopleSoft" sap:VirtualizedContainerService.HintSize="624,3133.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_11">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="strPassword" />
       <Variable x:TypeArguments="x:String" Name="strUsername" />
@@ -162,10 +162,10 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:RetryScope sap2010:Annotation.AnnotationText="Retry scope to retry login activity if there is any error for the first time." ContinueOnError="[convert.ToBoolean(in_Config(&quot;RetryScopeContinueOnError&quot;))]" DisplayName="Retry Scope: People Soft Login" sap:VirtualizedContainerService.HintSize="562,660.6666666666666" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[CInt(in_Config(&quot;LoginRetries&quot;))]">
+    <ui:RetryScope sap2010:Annotation.AnnotationText="Retry scope to retry login activity if there is any error for the first time." ContinueOnError="[convert.ToBoolean(in_Config(&quot;RetryScopeContinueOnError&quot;))]" DisplayName="Retry Scope: People Soft Login" sap:VirtualizedContainerService.HintSize="562,792.6666666666666" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[CInt(in_Config(&quot;LoginRetries&quot;))]">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="484.6666666666667,336" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="484.6666666666667,468" sap2010:WorkflowViewState.IdRef="Sequence_14">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -195,7 +195,7 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <TryCatch DisplayName="Try Catch: Peoplesoft Login" sap:VirtualizedContainerService.HintSize="422.6666666666667,54" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+            <TryCatch DisplayName="Try Catch: Peoplesoft Login" sap:VirtualizedContainerService.HintSize="438.6666666666667,594.6666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_8">
               <TryCatch.Variables>
                 <Variable x:TypeArguments="x:String" Name="strScreenshotPath" />
               </TryCatch.Variables>
@@ -216,10 +216,10 @@
                 </l:Peoplesoft_Login>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,155.33333333333334" sap2010:WorkflowViewState.IdRef="Catch`1_8">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.6666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -227,7 +227,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Exception Sequence" sap:VirtualizedContainerService.HintSize="450,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <Sequence DisplayName="Exception Sequence" sap:VirtualizedContainerService.HintSize="496,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
